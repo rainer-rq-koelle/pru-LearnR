@@ -38,11 +38,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -275,7 +275,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"# set a random seed and generate data\nset.seed(123)\nx <- rnorm(100)\n\n# calculate mean\nmean(x)","options":{"autorun":"false","editor-font-scale":1,"fig-width":7,"out-height":"","fig-cap":"","editor-quick-suggestions":"false","message":"true","editor-max-height":"","read-only":"false","output":"true","comment":"","dpi":72,"out-width":"700px","fig-height":5,"results":"markup","warning":"true","context":"interactive","classes":"","label":"unnamed-chunk-1"},"id":1}];
+globalThis.qwebrCellDetails = [{"options":{"label":"unnamed-chunk-1","fig-cap":"","message":"true","editor-max-height":"","context":"interactive","fig-width":7,"output":"true","out-width":"700px","results":"markup","classes":"","fig-height":5,"warning":"true","dpi":72,"autorun":"false","editor-quick-suggestions":"false","out-height":"","editor-font-scale":1,"comment":"","read-only":"false"},"code":"# set a random seed and generate data\nset.seed(123)\nx <- rnorm(100)\n\n# calculate mean\nmean(x)","id":1}];
 
 </script>
 <script type="module">
@@ -1585,7 +1585,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
+  const darkModeDefault = false;
   let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {

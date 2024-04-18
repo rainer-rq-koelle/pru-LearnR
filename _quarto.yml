@@ -30,8 +30,9 @@ book:
 format:
   html:
     theme: 
-      dark: darkly
       light: flatly
+      dark: darkly
+      
   pdf:
     documentclass: scrreprt
 
