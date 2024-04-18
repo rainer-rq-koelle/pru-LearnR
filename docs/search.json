@@ -4,19 +4,19 @@
     "href": "index.html",
     "title": "PRU LearnR - Pedestrian to Novice Series",
     "section": "",
-    "text": "0.1 This is the index\njust a test",
+    "text": "Preface\nThis quarto-book was developed with the help of many colleagues. It is also used to trial run the use of {webr} to allow for interactive content in online books.\nThis skeleton was setup for the {ggplot2} familiarisation and homework. Just awesome!\nWhile this might be disappointing for a first interaction. This could be the basis for transferring all our sessions into this format and support future “pedestrians” to get achieve the “novice” level … before embarking to become a “R/RStudio ecosystem ninja/jedi”!\nMay the forRce be with you!",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>This is the index</span>"
+      "Preface"
     ]
   },
   {
-    "objectID": "index.html#this-is-the-index",
-    "href": "index.html#this-is-the-index",
-    "title": "PRU LearnR - Pedestrian to Novice Series",
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Test chapter",
     "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "just a test\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>This is the index</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Test chapter</span>"
     ]
   },
   {

@@ -1,0 +1,13 @@
+# Test chapter 
+
+just a test
+
+
+```{webr-r}
+# set a random seed and generate data
+set.seed(123)
+x <- rnorm(100)
+
+# calculate mean
+mean(x)
+```

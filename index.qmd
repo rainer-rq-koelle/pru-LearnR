@@ -1,13 +1,12 @@
-## This is the index
+# Preface {-}
 
-just a test
+This quarto-book was developed with the help of many colleagues.
+It is also used to trial run the use of {webr} to allow for interactive content in online books.
 
+This skeleton was setup for the {ggplot2} familiarisation and homework.
+Just awesome!
 
-```{webr-r}
-# set a random seed and generate data
-set.seed(123)
-x <- rnorm(100)
+While this might be disappointing for a first interaction.
+This could be the basis for transferring all our sessions into this format and support future "pedestrians" to get achieve the "novice" level ... before embarking to become a "R/RStudio ecosystem ninja/jedi"!
 
-# calculate mean
-mean(x)
-```
+May the forRce be with you!

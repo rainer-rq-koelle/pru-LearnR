@@ -8,6 +8,7 @@ book:
   date: "`r format(Sys.time(),'%d %B, %Y)'"
   chapters:
     - index.qmd
+    - intro.qmd
     - dummy01-ggplot.qmd
 #    - part: "Laboratory"
 #      chapters: 
