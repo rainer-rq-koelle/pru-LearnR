@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PRU LearnR - Pedestrian to Novice Series",
+    "section": "",
+    "text": "0.1 This is the index\njust a test",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>This is the index</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#this-is-the-index",
+    "href": "index.html#this-is-the-index",
+    "title": "PRU LearnR - Pedestrian to Novice Series",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>This is the index</span>"
+    ]
+  }
+]

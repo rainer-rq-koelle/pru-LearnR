@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "PRU LearnR - Pedestrian to Novice Series"
+  author: "Prospect RNinjas"
+  date: "`r format(Sys.time(),'%d %B, %Y)'"
+  chapters:
+    - index.qmd
+#    - part: "Laboratory"
+#      chapters: 
+#      - Lab-1.qmd
+#      - Lab-2.qmd
+#      - Lab-3.qmd
+#      - Lab-4.qmd
+#      - Lab-5.qmd
+#      - Lab-6.qmd
+#      - Lab-7.qmd
+#      - Lab-8.qmd
+#      - Lab-9.qmd
+#      - Lab-10.qmd
+#      - Lab-11.qmd
+#      - Lab-12.qmd
+#      - Review-Sheet.qmd
+#      - Review_Sheet_2.qmd
+#      - Final-Review.qmd
+      
+format:
+  html:
+    theme: 
+      dark: darkly
+      light: flatly
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+filters: 
+  - webr
