@@ -1,0 +1,190 @@
+---
+title: Publication-Ready Tables in R
+# engine: knitr
+# filters:
+#   - webr
+# webr:
+#   packages: ['dplyr','gt']
+
+execute: 
+  message: false
+  warning: false
+---
+
+:::{.callout-note}
+This section is a demo/show only.     
+{gt} appears to be not supported under {webr} ... the latter being required for the interactive code-chunks.    
+Thus, practice by hacking this into posit.cloud or your local RStudio installation.
+:::
+
+## Overview
+
+*RMarkdown* has a primitive support for tables. This works fine during the development. I save showcasing the native RMarkdown syntax - just cumbersome for tables of more than a few rows.    
+However, publications deserve better.
+
+```{r}
+# show the first 10 rows of the mtcars dataset
+mtcars[1:10,]
+```
+
+There exists a variety of packages that help with the presentation of tables.
+Some of these table-packages are    
+
+* `{kable}` and its supporting package `{kableExtra}` - for pdf output
+* `{flextable}` - offered good output for html, pdf, and docx
+* `{gt}` a new(er)kid on the block and fitting nicely into the {tidyverse} ecosystem
+
+The `{gt}` package conceptualises *tables* composed of a cohesive set of table parts.
+Similar to `{ggplot}`'s *grammar-of-graphics*, `{gt}` allows for the construction of a wide variety of useful tables based on these parts.   
+These include the table header, the stub, the column labels and spanner column labels, the table body, and the table footer.
+
+```{r}
+#| label: fig-gt-parts
+#| fig-cap: "{gt} parts of a table"
+#| out-width: "80%"
+
+knitr::include_graphics("./figures/gt_parts_of_a_table.png")
+```
+
+## Getting goint with `{gt}`
+
+* to work with `{gt}`, we first load the library
+* the key table function is `gt()` which allows to set a couple of arguments (if needed)
+
+Note: `mtcars` stores the model names in a *special* manner. To make this work, we first create a separate `model` column.
+
+```{r}
+library(dplyr)
+library(gt)
+
+# prepare the dataset - move the model names into separate column
+# force this new column to the beginning (before the 1st column)
+my_cars <- mtcars[1:10,] |> 
+  mutate(models = rownames(mtcars[1:10,]), .before = 1)
+
+# work with {gt}
+my_cars |> 
+  gt()
+```
+
+### Organising the table content
+
+Occassionally, there is a need to organise subsets of the columns.    
+This could be done as arguments of the `gt()` call.
+
+Assuming our data has respective grouping variables, one can set these with `gt(rowname_col = ..., groupname_col = ...)`
+
+For example we can group our data set according to the number of `gear`s.
+This inserts the `grouping` into the table presentation, i.e. there are grouping rows separating the different groups.
+
+```{r}
+my_cars |> 
+  gt(
+    groupname_col = "gear"
+  )
+```
+
+### Labelling Groups of columns -- `spanner`
+
+Dependent on the data, one can introduce additional column (group) labels.
+`tab_spanner()` allows to combine columns under a separate (group) label.
+It accepts the `label` and `columns` argument.
+We can use standard dplyr-indexing to group columns. Note that when using a named vector, the sequence of columns might be influenced. Below the `carb` column is shifted.
+
+Note: use a separate `tab_spanner()` per desired grouping.
+
+```{r}
+my_cars |> 
+  gt() |> 
+  tab_spanner(label = "first block", columns = mpg:drat) |> 
+  tab_spanner(label = "other block", columns = c("qsec","vs","carb"))
+```
+
+### Adding title, subtitle, and footnotes
+
+```{r}
+my_cars |> 
+  gt() |> 
+  tab_header(
+     title = "Title of my_cars table"
+    ,subtitle = "Any useful subtitle information can go here" 
+    )
+```
+
+Next, we want to set a footnote. 
+Here we can differentiate between
+
+* *lazy* table footnotes (that should be sourcenotes ;) )
+* {gt} sourcenotes (optional) to account for references
+* {gt} footnotes to cross-reference table cells
+
+
+```{r}
+my_cars |> 
+  gt() |> 
+  tab_footnote(
+    footnote = "any footnote text"  # ignoring the location argument
+  ) |> 
+  tab_source_note(
+    source_note = "a source note does not expect a reference to any cell body"
+  )
+```
+
+The power of `footnotes()` is that it can be combined with a reference to any part of the table.    
+There exists various helper for the referencing. In most cases, we want to reference one (or several) table cells with `cells_body()`.
+
+`cells_body()` 
+
+* expects a `columns` and/or `rows` argument
+* one could use dplyr-indexing
+* in particular, `rows` accepts logical conditions
+
+Let's try this (we truncate the table to the 1st, 9th, and 10th row):
+
+```{r}
+my_cars[c(1,9,10),] |> 
+  gt() |> 
+  tab_footnote(
+      footnote  = "One of the coolest car models ever built!"
+    , locations = cells_body(
+                        columns = models               # ref to column
+                      , rows    = models == "Merc 280" # a logical condition
+                      )
+    ) |> 
+  tab_footnote(
+      footnote  = "Six cylinders are two more than four"
+    , locations = cells_body(columns = cyl, rows = cyl == 6) 
+  )
+
+```
+
+Note: similar to the layering of a ggplot, the order of the footnotes follows the `last-on-top` principle.
+
+The aforementioned referencing allows to also highlight specific cells by formatting its presentation.    
+For the following we use `tab_style()` and the `cell_fill()` helper.
+
+
+
+```{r}
+my_cars[c(1,9,10),] |> 
+  gt() |> 
+  tab_style(
+      locations = cells_body(columns = cyl, rows = cyl == 6)
+    , style     = cell_fill(color = "green")
+  )
+```
+
+### Theming `{gt}` tables - opt_stylize
+
+`{gt}` provides a set of pre-defined table style options.    
+These styles allow for (smaller) adaptations:
+
+* `style` pick one of the pre-defined styles, currently 1 through 6, default is 1.
+* `color` allows to select from a limited set of colors. There are six color variations: "blue", "cyan", "pink", "green", "red", and "gray".
+
+```{r}
+my_cars[c(1,9,10),] |> 
+  gt() |> 
+  opt_stylize(style = 2, color = "cyan")
+```
+

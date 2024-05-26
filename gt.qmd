@@ -7,6 +7,8 @@ webr:
   packages: ['dplyr','gt']
 ---
 
+NOT USED CURRENTLY - webr and gt clash
+
 ::: {.content-visible when-format="html"}
 ::: callout-warning
 The installation of the packages and their loading in webR may take a while.
