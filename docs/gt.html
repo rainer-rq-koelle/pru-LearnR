@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PRU LearnR - Pedestrian to Novice Series - 1&nbsp; Test chapter</title>
+<title>PRU LearnR - Pedestrian to Novice Series - 3&nbsp; Publication-Ready Tables in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./dummy01-ggplot.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./dummy01-ggplot.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -253,7 +252,7 @@ body.reveal.quarto-dark div.qwebr-console-area {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = [''];
+globalThis.qwebrInstallRPackagesList = ['dplyr', 'gt'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -275,7 +274,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"autorun":"false","message":"true","fig-width":7,"fig-height":5,"warning":"true","dpi":72,"results":"markup","editor-max-height":"","label":"unnamed-chunk-1","out-height":"","read-only":"false","editor-quick-suggestions":"false","context":"interactive","comment":"","output":"true","out-width":"700px","fig-cap":"","classes":"","editor-font-scale":1},"id":1,"code":"# set a random seed and generate data\nset.seed(123)\nx <- rnorm(100)\n\n# calculate mean\nmean(x)"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"library(gt)","options":{"results":"markup","out-height":"","dpi":72,"editor-font-scale":1,"fig-height":5,"editor-quick-suggestions":"false","editor-max-height":"","out-width":"700px","label":"unnamed-chunk-1","fig-width":7,"classes":"","context":"interactive","message":"true","output":"true","warning":"true","read-only":"false","autorun":"false","fig-cap":"","comment":""}},{"id":2,"code":"my_tbl <- mtcars[1:10,]\n\nmy_tbl","options":{"results":"markup","out-height":"","dpi":72,"editor-font-scale":1,"fig-height":5,"editor-quick-suggestions":"false","editor-max-height":"","out-width":"700px","label":"unnamed-chunk-2","fig-width":7,"classes":"","context":"interactive","message":"true","output":"true","warning":"true","read-only":"false","autorun":"false","fig-cap":"","comment":""}}];
 
 </script>
 <script type="module">
@@ -1124,7 +1123,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test chapter</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gt.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Publication-Ready Tables in R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1161,7 +1160,7 @@ globalThis.qwebrExecuteCode = async function (
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test chapter</span></span></a>
   </div>
 </li>
@@ -1173,7 +1172,7 @@ globalThis.qwebrExecuteCode = async function (
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gt.html" class="sidebar-item-text sidebar-link">
+  <a href="./gt.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Publication-Ready Tables in R</span></span></a>
   </div>
 </li>
@@ -1183,7 +1182,13 @@ globalThis.qwebrExecuteCode = async function (
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">3.1</span> Overview</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1417,7 +1422,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test chapter</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Publication-Ready Tables in R</span></h1>
 </div>
 
 
@@ -1434,14 +1439,36 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>When accessing the (book) page, you will see a <code>WEBR STATUS</code> loading symbol at the top of the page. This loads some of the required (underlying packages for this page). It may take a few seconds when you access this for the first time (and your browser has not yet cashed and downloaded the required package).</p>
-<p>But it should be reasonable fast.</p>
-<p>Conceptually, once you see the <em>“green” Ready!</em> label. All prep work is done and the ensuing code windows work.</p>
-<p>Give it a try … and run the code!</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The installation of the packages and their loading in webR may take a while. The install is happening in the background, so do not worry.<br>
+<strong><em>WEBR STATUS Ready</em></strong> will be soon green!<br>
+Once everything is set up, code execution will be quick. Conceptually, you may also disconnect from the internet once the material is loaded.</p>
+</div>
+</div>
+<style>
+  .qwebr-code-output-stdout {background-color: powderblue;}
+  .qwebr-button-run   {color: red;}
+  .qwebr-editor {font-size: 5}
+</style>
+<section id="overview" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">3.1</span> Overview</h2>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>why is this not working</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1977,14 +2004,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link  aria-label=" preface"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./dummy01-ggplot.html" class="pagination-link  aria-label=" &lt;span="" -="" plotting="" in="" r&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Visualisation - Plotting in R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./dummy01-ggplot.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Visualisation - Plotting in R</span>">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Visualisation - Plotting in R</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

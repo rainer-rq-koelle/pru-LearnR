@@ -4,12 +4,15 @@ project:
 
 book:
   title: "PRU LearnR - Pedestrian to Novice Series"
-  author: "Prospect RNinjas"
-  date: "`r format(Sys.time(),'%d %B, %Y)'"
+  author: "Prospect Padawans & RNinjas"
+  date: today
+  date-format: "[revised version of] D MMM YYYY"
+  downloads: pdf
   chapters:
     - index.qmd
     - intro.qmd
     - dummy01-ggplot.qmd
+    - gt.qmd
 #    - part: "Laboratory"
 #      chapters: 
 #      - Lab-1.qmd

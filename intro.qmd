@@ -1,7 +1,14 @@
 # Test chapter 
 
-just a test
+When accessing the (book) page, you will see a `WEBR STATUS` loading symbol at the top of the page. 
+This loads some of the required (underlying packages for this page).
+It may take a few seconds when you access this for the first time (and your browser has not yet cashed and downloaded the required package).
 
+But it should be reasonable fast. 
+
+Conceptually, once you see the *"green" Ready!* label. All prep work is done and the ensuing code windows work.
+
+Give it a try ... and run the code!
 
 ```{webr-r}
 # set a random seed and generate data

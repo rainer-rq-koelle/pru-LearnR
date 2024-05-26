@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PRU LearnR - Pedestrian to Novice Series - 2&nbsp; ggplot</title>
+<title>PRU LearnR - Pedestrian to Novice Series - 2&nbsp; Visualisation - Plotting in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./gt.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -308,7 +309,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"library(ggplot2)","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-1","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":2,"code":"ggplot()","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-2","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":3,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp))","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-3","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":4,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point()","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-4","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":5,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, color = \"blue\", alpha = 0.5)","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-5","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":6,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, color = \"blue\", alpha = 0.5) +\n  labs(x = \"Miles per Gallon\", y = \"Horse Power\",\n       title = \"Car stuff\")","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-6","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":7,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp, color = cyl)) +\n  geom_point(size = 3, alpha = 0.5)","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-7","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":8,"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, alpha = 0.5) +\n  facet_wrap(~cyl)","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-8","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}},{"id":9,"code":"# Add you code here","options":{"classes":"","autorun":"false","out-width":"700px","message":"true","fig-height":5,"fig-width":7,"output":"true","editor-quick-suggestions":"false","editor-max-height":"","label":"unnamed-chunk-9","out-height":"","read-only":"false","dpi":72,"context":"interactive","comment":"","results":"markup","fig-cap":"","editor-font-scale":1,"warning":"true"}}];
+globalThis.qwebrCellDetails = [{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-1","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"plot(iris)","id":1},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-2","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# define the vectors\nx <- -5:5\ny <- x^2\n# now plot\nplot(x,y)","id":2},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-3","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# Add you code here","id":3},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-4","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# let's check the distribution of the horsepower\n# with the breaks argument, you can control the number of (breakdown)bins\nhp_vec <- mtcars$hp\nhist(hp_vec)\nhist(hp_vec, breaks = 30)","id":4},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-5","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# Add you code here","id":5},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-6","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"library(ggplot2)","id":6},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-7","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# basic call to create the \"canvas\"\nggplot()","id":7},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-8","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp))","id":8},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-9","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point()","id":9},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-10","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, color = \"blue\", alpha = 0.5)","id":10},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-11","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# Adapt as appropriate\nggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 1.5, color = \"lightgreen\")","id":11},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-12","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, color = \"blue\", alpha = 0.5) +\n  labs(x = \"Miles per Gallon\", y = \"Horse Power\",\n       title = \"Car stuff\")","id":12},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-13","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp, color = cyl)) +\n  geom_point(size = 3, alpha = 0.5)","id":13},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-14","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +\n  geom_point(size = 3, alpha = 0.5) +\n  facet_wrap(~cyl)","id":14},{"options":{"autorun":"false","read-only":"false","classes":"","warning":"true","editor-max-height":"","results":"markup","fig-height":5,"out-width":"700px","output":"true","message":"true","editor-font-scale":1,"context":"interactive","dpi":72,"fig-cap":"","label":"unnamed-chunk-15","editor-quick-suggestions":"false","out-height":"","fig-width":7,"comment":""},"code":"# Add you code here","id":15}];
 
 </script>
 <script type="module">
@@ -1157,7 +1158,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dummy01-ggplot.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ggplot</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dummy01-ggplot.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Visualisation - Plotting in R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -1174,6 +1175,7 @@ globalThis.qwebrExecuteCode = async function (
     <div class="sidebar-title mb-0 py-0">
       <a href="./">PRU LearnR - Pedestrian to Novice Series</a> 
         <div class="sidebar-tools-main">
+    <a href="./PRU-LearnR---Pedestrian-to-Novice-Series.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -1200,7 +1202,13 @@ globalThis.qwebrExecuteCode = async function (
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dummy01-ggplot.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ggplot</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Visualisation - Plotting in R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Publication-Ready Tables in R</span></span></a>
   </div>
 </li>
     </ul>
@@ -1213,9 +1221,19 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#ggplot" id="toc-ggplot" class="nav-link active" data-scroll-target="#ggplot"><span class="header-section-number">2.0.1</span> ggplot</a></li>
-  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="header-section-number">2.0.2</span> Basics</a></li>
-  <li><a href="#grouping" id="toc-grouping" class="nav-link" data-scroll-target="#grouping"><span class="header-section-number">2.0.3</span> Grouping</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">2.1</span> Overview</a></li>
+  <li><a href="#base-r-plotting" id="toc-base-r-plotting" class="nav-link" data-scroll-target="#base-r-plotting"><span class="header-section-number">2.2</span> base-R plotting</a></li>
+  <li><a href="#univariate-plots---get-a-feel-for-the-data" id="toc-univariate-plots---get-a-feel-for-the-data" class="nav-link" data-scroll-target="#univariate-plots---get-a-feel-for-the-data"><span class="header-section-number">2.3</span> Univariate plots - Get a feel for the data</a>
+  <ul class="collapse">
+  <li><a href="#base-r-histogram" id="toc-base-r-histogram" class="nav-link" data-scroll-target="#base-r-histogram"><span class="header-section-number">2.3.1</span> Base-R histogram</a></li>
+  <li><a href="#base-r-boxplot" id="toc-base-r-boxplot" class="nav-link" data-scroll-target="#base-r-boxplot"><span class="header-section-number">2.3.2</span> Base-R boxplot</a></li>
+  </ul></li>
+  <li><a href="#plotting-with-ggplot2" id="toc-plotting-with-ggplot2" class="nav-link" data-scroll-target="#plotting-with-ggplot2"><span class="header-section-number">2.4</span> Plotting with <code>{ggplot2}</code></a>
+  <ul class="collapse">
+  <li><a href="#ggplot2-basics" id="toc-ggplot2-basics" class="nav-link" data-scroll-target="#ggplot2-basics"><span class="header-section-number">2.4.1</span> <code>{ggplot2}</code> Basics</a></li>
+  <li><a href="#first-improvements---towards-production-ready-graphs" id="toc-first-improvements---towards-production-ready-graphs" class="nav-link" data-scroll-target="#first-improvements---towards-production-ready-graphs"><span class="header-section-number">2.4.2</span> First improvements - towards production ready graphs</a></li>
+  <li><a href="#grouping" id="toc-grouping" class="nav-link" data-scroll-target="#grouping"><span class="header-section-number">2.4.3</span> Grouping</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1451,7 +1469,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">ggplot</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Visualisation - Plotting in R</span></h1>
 </div>
 
 
@@ -1478,85 +1496,23 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Installing and loading ggplot2 on webR takes a little while. The install is happening in the background. Don’t worry, once you’ve waited to load the package everything else will be quick.</p>
+<p>The installation of the packages and loading ggplot2 on webR may take a while. The install is happening in the background, so do not worry. <em>WEBR STATUS Ready</em> will be soon green! Once everything is set up, code execution will be quick. Conceptually, you may also disconnect from the www.</p>
 </div>
 </div>
-<section id="ggplot" class="level3" data-number="2.0.1">
-<h3 data-number="2.0.1" class="anchored" data-anchor-id="ggplot"><span class="header-section-number">2.0.1</span> ggplot</h3>
-<ul>
-<li>Very popular plotting package</li>
-<li>Good plots quickly</li>
-<li>Declarative - describe what you want not how to build it</li>
-<li>Contrasts w/Imperative - how to build it step by step</li>
-</ul>
+<section id="overview" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
+<p>Visualisations form a key component of our deliverables.<br>
+There are several plotting “systems” in R. This session will focus on plotting with <code>{ggplot2}</code> after introducing some <em><code>base-R graphic</code> commands</em>. The latter might come handy for a quick orientation or initial data exploration. However, <code>{ggplot2}</code> offers more flexibility and extensibility when we want to produce publication-ready plots.</p>
 </section>
-<section id="basics" class="level3" data-number="2.0.2">
-<h3 data-number="2.0.2" class="anchored" data-anchor-id="basics"><span class="header-section-number">2.0.2</span> Basics</h3>
-<ul>
-<li>Load the package and some data</li>
-</ul>
+<section id="base-r-plotting" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="base-r-plotting"><span class="header-section-number">2.2</span> base-R plotting</h2>
+<p>Base-R uses the generic <code>plot()</code> function (and many objects have implemented a plot-function). So let’s <em>explore</em> associations in the built-in <code>iris</code> dataset.<br>
+To be frank, <code>plot()</code> works here as it is implemented as a method for a R-object (i.e.&nbsp;the iris dataset).</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>To build a plot using <code>ggplot</code> we start with the <code>ggplot()</code> function</li>
-</ul>
+<p>More generically, <code>plot(x,y)</code> accepts <em>vectors</em>. A simple scatter-plot of numerical values can then be called with the following commands.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li><code>ggplot()</code> creates a base ggplot object that we can then add things to - like a blank canvas</li>
-<li>We can also add optional arguments for information to be shared across different components of the plot</li>
-<li>The two main arguments we typically use here are</li>
-<li><code>data</code> - which is the name of the data frame we are working with, so <code>acacia</code></li>
-<li><code>mapping</code> - which describes which columns of the data are used for different aspects of the plot</li>
-<li>We create a <code>mapping</code> by using the <code>aes</code> function, which stands for “aesthetic”, and then linking columns to pieces of the plot</li>
-<li>We’ll start with telling ggplot what value should be on the x and y axes</li>
-<li>Let’s plot the relationship betwen the circumference of an acacia and its height</li>
-</ul>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>This still doesn’t create a figure, it’s just a blank canvas and some information on default values for data and mapping columns to pieces of the plot</li>
-<li>We can add data to the plot using layers</li>
-<li>We do this by adding a <code>+</code> after the the <code>ggplot</code> function and then adding something called a <code>geom</code>, which stands for <code>geometry</code></li>
-<li>To make a scatter plot we use <code>geom_point</code></li>
-</ul>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>To change things about the layer we can pass additional arguments to the <code>geom</code></li>
-<li>We can do things like change
-<ul>
-<li>the <code>size</code> of the points, we’ll set it to <code>3</code></li>
-<li>the <code>color</code> of the points, we’ll set it to <code>"blue"</code></li>
-<li>the transparency of the points, which is called <code>alpha</code>, we’ll set it to 0.5</li>
-</ul></li>
-</ul>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li><p>Try changing these values to make the graph look like you want it to</p></li>
-<li><p>To add labels (like documentation for your graphs!) we use the <code>labs</code> function</p></li>
-</ul>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="grouping" class="level3" data-number="2.0.3">
-<h3 data-number="2.0.3" class="anchored" data-anchor-id="grouping"><span class="header-section-number">2.0.3</span> Grouping</h3>
-<ul>
-<li>Group on a single graph</li>
-<li>Look at influence of experimental treatment</li>
-</ul>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li><p>Try changing the above code to color based on the <code>gear</code></p></li>
-<li><p>We can also split each group into different subplots (known as facets)</p></li>
-</ul>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Try changing this code to create a subplot for each value in <code>vs</code> with points of size 4</li>
-</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1567,8 +1523,9 @@ Exercise
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make a scatter plot with <code>hp</code> on the x axis and <code>wt</code> on the y axis. Label the x axis “Horse Power” and the y axis “Weight”. Make one subplot for each value in <code>gear</code>.</p>
-<div id="qwebr-insertion-location-9"></div>
+<p>The <code>mtcars</code> dataset is a built-in dataset in BaseR. It provides information on a series of car models.</p>
+<p>Make a scatter plot with (horsepower) <code>hp</code> on the x axis and (weight of the car) <code>wt</code> on the y axis. Do not worry about axis labels, etc.</p>
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Your result should look like the plot below</p>
 </div>
@@ -1586,10 +1543,244 @@ Expected Result
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot wt versus hp of the mtcars dataset in BaseR</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the plot function uses vectors </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Note 1: you recall how to access vectors with the $ notation, don't you?</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Note 2: x = ... and y = ... is verbose. </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Recall however, position matters in function calls.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Test this by swapping around x any y.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> mtcars<span class="sc">$</span>wt, <span class="at">y =</span> mtcars<span class="sc">$</span>hp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
 <p><img src="dummy01-ggplot_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># you may also assign the vectors outside the plot() call, e.g.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_x <span class="ot">&lt;-</span> mtcars<span class="sc">$</span>wt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>my_y <span class="ot">&lt;-</span> mtcars<span class="sc">$</span>hp</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> my_x, <span class="at">y =</span> my_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dummy01-ggplot_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="univariate-plots---get-a-feel-for-the-data" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="univariate-plots---get-a-feel-for-the-data"><span class="header-section-number">2.3</span> Univariate plots - Get a feel for the data</h2>
+<section id="base-r-histogram" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="base-r-histogram"><span class="header-section-number">2.3.1</span> Base-R histogram</h3>
+<p>It is often useful to get a feel for the distribution of variables/data values. Here a <em>histogram</em> or <em>boxplot</em> are useful exploratory helpers.<br>
+Before constructing a publication ready (gg)plot (c.f. next section), the base-R variants may help.</p>
+<p>Please recall: base-R plotting works with vectors!</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="base-r-boxplot" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="base-r-boxplot"><span class="header-section-number">2.3.2</span> Base-R boxplot</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Another way of showing the distribution of values are so-called boxplots. The respective base-R call is <code>boxplot(x)</code>.</p>
+<p>Using the built-in <code>mtcars</code> dataset, create a boxplot of horsepower <code>hp</code> and then a boxplot for the variable weight <code>wt</code>.</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Your result should look like the plot below</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expected Result
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot of weight variable</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="at">x =</span> mtcars<span class="sc">$</span>wt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dummy01-ggplot_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="plotting-with-ggplot2" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="plotting-with-ggplot2"><span class="header-section-number">2.4</span> Plotting with <code>{ggplot2}</code></h2>
+<p><code>{ggplot2}</code> is a popular plotting package of the <code>{tidyverse}</code>-family. The package implements the <em>grammar of graphics</em> which offers a conceptual framework to “construct” plots.<br>
+This allows for the generation of good plots quickly … that can then be iteratively <em>“beautified”</em> and made publication ready.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Things to know/recall
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The underlying framework (i.e.&nbsp;<em>grammar of graphics</em>) considers constructing a visualisation as a series of composeable elements.<br>
+This allows for the creation of “thousands of visualisation” instead of being restricted to a defined set of graphs in other software packages/apps.</p>
+</div>
+</div>
+<p>Note: As you will learn in the following <code>{ggplot2}</code> works extremely well with a <code>tibble/dataframe</code> in the <em>long</em> format (recall: tidy data).</p>
+<section id="ggplot2-basics" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="ggplot2-basics"><span class="header-section-number">2.4.1</span> <code>{ggplot2}</code> Basics</h3>
+<ul>
+<li>as usual, before working with a package, one has to load the package (and some data)</li>
+<li>please recall: if your setup has not yet the library available, you can download it with the command <code>install.packages("ggplot2")</code>.</li>
+</ul>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>To build a plot using <code>{ggplot2}</code> we start with the <code>ggplot()</code> function</li>
+</ul>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li><code>ggplot()</code> creates a base ggplot object, think about a painter’s <em>blank canvas</em>. On this canvas we can then add <em>layer by layer</em> to establish our <em>picture</em></li>
+<li><code>ggplot()</code> accepts a series of optional arguments for information to be shared across different components of the plot</li>
+<li>The two main arguments we typically use here are
+<ul>
+<li><code>data</code> - which is the name of the data frame we are working with, so <code>mtcars</code></li>
+<li><code>mapping</code> - which describes which columns of the data are used for different aspects of the plot</li>
+</ul></li>
+<li>We create a <code>mapping</code> by using the <em>aesthetic</em> function <code>aes()</code> linking columns (~ vectors within our dataframe) to pieces of the plot
+<ul>
+<li>We typically start with telling <code>ggplot()</code> what values should be on the x and y axes</li>
+</ul></li>
+</ul>
+<p>Let’s plot the relationship betwen the horsepower <code>hp</code> of the <em>mtcars</em> dataset and the fuel consumption, mile-per-gallon <code>mpg</code>.</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>This doesn’t create a final figure. This time the blank <em>canvas</em> from above is augmented with some additional (aesthetic) information on default values for the data and mapped columns (e.g.&nbsp;a range of the x-axis is established that covers the data points in <code>mpg</code>, labels for the x- and y-axis are added)</li>
+<li>To show (aka add) data to the plot, we add a so-called <em><code>geom</code></em>etric layer (or <code>geometry</code>)</li>
+<li>ggplot2 uses the <code>+</code> operator to add a new layer</li>
+<li>as a reasonable starting point for any bivariate (two variable) plot, we want to establish a scatter plot. The ggplot2 geometry for this is <code>geom_point()</code></li>
+</ul>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>To change things about the presentation of the layer we can pass additional arguments to the <code>geom</code> calls.
+<ul>
+<li>For example, we can set/change
+<ul>
+<li>the <code>size</code> argument of the points, let’s set it to <code>3</code></li>
+<li>the <code>color</code> argument of the points, we’ll set it to <code>"blue"</code></li>
+<li>the transparency of the points, i.e.&nbsp;<code>alpha</code> value, let’s pick something semi-transparent between 0-100%, i.e.&nbsp;let’s set it to 0.5</li>
+</ul></li>
+</ul></li>
+</ul>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try changing these values to make the graph look like you want it to. Explore how the graph changes when setting different values for <code>size</code>, <code>color</code>, or <code>alpha</code>.</p>
+<p>For example * set size to 1.5 or color to “lightgreen”. * Remove one/some of these arguments (e.g.&nbsp;alpha).</p>
+<p>What happens, when you remove <code>size = 1.5</code>?</p>
+<p>P.S. Do not forget to hit <code>Run Code</code> after your changes ;)</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</section>
+<section id="first-improvements---towards-production-ready-graphs" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="first-improvements---towards-production-ready-graphs"><span class="header-section-number">2.4.2</span> First improvements - towards production ready graphs</h3>
+<p>While <code>ggplot2</code> implements the <em>grammar of graphics</em> and speaks about <em>aesthetics</em> … the default color-settings, including the “characteristic” background are – at least – cringeworthy (in the humble opinion of the editor).</p>
+<p>Above serves as a good basic plot. To use the graph in a report of presentation the following might help:</p>
+<ul>
+<li>make the axis-labels “human-readable”, and possibly add a title</li>
+<li>choose another background</li>
+</ul>
+<p>Labels serve as a documentation for your graph and can be added with the <code>labs()</code> function (layer). <code>labs()</code> accepts arguments for * <code>title</code>, <code>subtitle</code>, and <code>caption</code> * the axes, i.e.&nbsp;<code>x</code> and <code>y</code>. * you provide the desired <code>string</code>, e.g.&nbsp;<code>"Miles per Gallon"</code> to the argument</p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="grouping" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="grouping"><span class="header-section-number">2.4.3</span> Grouping</h3>
+<ul>
+<li>Group on a single graph</li>
+<li>Look at influence of experimental treatment</li>
+</ul>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li><p>Try changing the above code to color based on the <code>gear</code></p></li>
+<li><p>We can also split each group into different subplots (known as facets)</p></li>
+</ul>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ul>
+<li>Try changing this code to create a subplot for each value in <code>vs</code> with points of size 4</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make a scatter plot with <code>hp</code> on the x axis and <code>wt</code> on the y axis. Label the x axis “Horse Power” and the y axis “Weight”. Make one subplot for each value in <code>gear</code>.</p>
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Your result should look like the plot below</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expected Result
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="dummy01-ggplot_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1598,7 +1789,7 @@ Expected Result
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1607,20 +1798,21 @@ Solution Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> wt)) <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Horse Power"</span>, <span class="at">y =</span> <span class="st">"Weight"</span>) <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>gear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> hp, <span class="at">y =</span> wt)) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Horse Power"</span>, <span class="at">y =</span> <span class="st">"Weight"</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>gear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -2162,6 +2354,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./gt.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Publication-Ready Tables in R</span>">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Publication-Ready Tables in R</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

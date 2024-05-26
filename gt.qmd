@@ -1,0 +1,40 @@
+---
+title: Publication-Ready Tables in R
+engine: knitr
+filters:
+  - webr
+webr:
+  packages: ['dplyr','gt']
+---
+
+::: {.content-visible when-format="html"}
+::: callout-warning
+The installation of the packages and their loading in webR may take a while.
+The install is happening in the background, so do not worry.\
+***WEBR STATUS Ready*** will be soon green!\
+Once everything is set up, code execution will be quick.
+Conceptually, you may also disconnect from the internet once the material is loaded.
+:::
+:::
+
+```{=html}
+<style>
+  .qwebr-code-output-stdout {background-color: powderblue;}
+  .qwebr-button-run   {color: red;}
+  .qwebr-editor {font-size: 5}
+</style>
+```
+
+## Overview
+
+```{webr-r}
+library(gt)
+```
+
+```{webr-r}
+my_tbl <- mtcars[1:10,]
+
+my_tbl
+```
+
+why is this not working

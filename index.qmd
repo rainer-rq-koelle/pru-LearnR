@@ -1,12 +1,15 @@
-# Preface {-}
+# Preface {.unnumbered}
 
 This quarto-book was developed with the help of many colleagues.
-It is also used to trial run the use of {webr} to allow for interactive content in online books.
+It builds on the material presented and discussed during the *LearnR* sessions at EUROCONTROL.
 
-This skeleton was setup for the {ggplot2} familiarisation and homework.
-Just awesome!
+This online book/resource is *work-in-progress* and represents a trial-run of the use of `{webr}` to allow for interactive content in online books.
+
+This skeleton was setup for the recap on `{ggplot2}` and a follow-up session on recapping more `{dplyr}` and `{ggplot2}` stuff, and then venturing into `{gt}`.
+It is planned to add the material from the first sessions as we go (and time permits).
 
 While this might be disappointing for a first interaction.
-This could be the basis for transferring all our sessions into this format and support future "pedestrians" to get achieve the "novice" level ... before embarking to become a "R/RStudio ecosystem ninja/jedi"!
+This could be the basis for transferring all our sessions into this format and support future "pedestrians" to get achieve the "novice" level ...
+before embarking to become a "R/RStudio ecosystem ninja/jedi"!
 
 May the forRce be with you!
