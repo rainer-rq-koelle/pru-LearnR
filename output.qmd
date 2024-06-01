@@ -1,0 +1,148 @@
+---
+title: "Communicate - Output"
+---
+
+## Overview
+
+Throughout the past sessions we have implicitly *rendered* output to communicate our results. 
+`Quarto` supports the production of a variety of documents in a reproducible manner. 
+
+Authoring `Quarto`-documents is done with `(R)Markdown` - a *light-weight* syntax around plein text [^plein-text].
+
+<!-- footnote ---------------->
+[^plein-text]: Thus, conceptually, we can edit/author a Qmd-document in any text editor - which ensures long-term survivability. Rendering a Qmd-document, however, requires an environment in which the *marked* text is interpreted.
+
+From a processing perspective, the input (a combination of *text* + *code* + *visual elements*) is "converted" to the different outputs formats. This process takes the input, interprets the R (or other code) to (pure) Markdown. Pandoc takes the markdown and converts it into the desired output format [^pandoc].
+
+[^pandoc]: If you are interested in tinkering with *`pandoc`*, have fun at: https://pandoc.org/try/.
+
+```{r}
+#| label: fig-allison-markdown-wizards
+#| fig-cap: Artwork by [@allison_horst](https://allisonhorst.com)
+#| echo: false
+
+knitr::include_graphics("figures/allisonhorst-rmarkdown-wizards.png")
+```
+
+
+Quarto supports the creation of *static* and *interactive* content dependent on the chosen output format.
+This offers the opportunity to expand content beyond the classical categories of 'report'/'technical paper' and can serve to establish interactive version of static reports, presentations, and dashboards. 
+
+This section provides a quick-step guide to/through
+
+* (R)Markdown
+* Quarto document structure and its YAML
+
+
+## A FL300 look at a *"document"*
+
+:::: {layout="[40,60]"}
+
+::: {#left}
+
+```{r}
+#| label: fig-doc-structure
+#| fig-cap: Example document
+#| echo: false
+
+knitr::include_graphics("figures/quarto-document-structure-example.png")
+```
+:::
+
+::: {#right}
+
+A document consists of 
+
+* content
+  * text, code, and visualisations
+* structure
+  * layout
+  * paragraphs or other blocks of content
+* appearance
+  * fonts, colour, etc.
+* format
+  * overall output and functionality (i.e. static, interactive)
+
+:::
+
+::: {#left2}
+
+```{r}
+#| label: fig-doc-blocks
+#| fig-cap: "Document as a sequence of blocks"
+#| echo: false 
+#| 
+knitr::include_graphics("figures/quarto-document-block.png")
+``` 
+
+:::
+
+::: {#right2}
+
+Thus, a document is a sequence (or list) of *blocks* that contain *inline elements* or other blocks.
+Such blocks and elements can be associated with *metadata*.
+
+A block element starts on a new line and is followed by an empty line.
+It forms an identifiable block.
+
+:::
+::::
+
+## (R)Markdown
+
+The philosphy behind (R)Markdown is to use plain text format that is easy to write and even easy to read.
+This reduces the cognitive load and allows to focus on the writing/editing.
+
+[{{< fa brands markdown size=2x >}}]{style="color: green;"}
+
+## Text Formatting
+
++-----------------------------------------+-----------------------------------------+
+| Markdown Syntax                         | Output                                  |
++=========================================+=========================================+
+| ``` markdown                            | ... well ... I hope you are not         |
+| This is some creative text ...          |  expecting something here ....          |
+|  just type                              |  that would be different from what      |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------|
+| ``` markdown                            |                                         |
+| *italics*, **bold**, ***bold italics*** | *italics*, **bold**, ***bold italics*** |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | superscript^2^ / subscript~2~           |
+| superscript^2^ / subscript~2~           |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            | ~~strikethrough~~                       |
+| ~~strikethrough~~                       |                                         |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+| ``` markdown                            |                                         |
+| [This text is underlined]{.underline}   | [This text is underlined]{.underline}   |
+| ```                                     |                                         |
++-----------------------------------------+-----------------------------------------+
+
+
+::: {layout-ncol=2 style='padding:5'}
+
+**(R)Markdown**
+
+**Output** 
+
+* **highlight text** (italic, bold): `*italic text* and **bold text**`
+
+*italic text* and **bold text**
+
+* super- and subscript: `superscript^up^ and subscript~down~`
+
+superscript^up^ and subscript~down~
+
+* **underline** (using Pandoc): `my [text to underline]{.underline}`
+
+my [text to underline]{.underline}
+
+* **strikethrough**: `~~text stricken through~~`
+
+~~text stricken through~~
+:::
+

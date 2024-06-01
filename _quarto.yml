@@ -13,6 +13,7 @@ book:
     - intro.qmd
     - dummy01-ggplot.qmd
     - gt2.qmd
+    - output.qmd
 #    - part: "Laboratory"
 #      chapters: 
 #      - Lab-1.qmd

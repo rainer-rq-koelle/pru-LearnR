@@ -88,5 +88,65 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Publication-Ready Tables in R</span>"
     ]
+  },
+  {
+    "objectID": "output.html",
+    "href": "output.html",
+    "title": "4  Communicate - Output",
+    "section": "",
+    "text": "4.1 Overview\nThroughout the past sessions we have implicitly rendered output to communicate our results. Quarto supports the production of a variety of documents in a reproducible manner.\nAuthoring Quarto-documents is done with (R)Markdown - a light-weight syntax around plein text 1.\nFrom a processing perspective, the input (a combination of text + code + visual elements) is “converted” to the different outputs formats. This process takes the input, interprets the R (or other code) to (pure) Markdown. Pandoc takes the markdown and converts it into the desired output format 2.\nFigure 4.1: Artwork by @allison_horst\nQuarto supports the creation of static and interactive content dependent on the chosen output format. This offers the opportunity to expand content beyond the classical categories of ‘report’/‘technical paper’ and can serve to establish interactive version of static reports, presentations, and dashboards.\nThis section provides a quick-step guide to/through",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
+  },
+  {
+    "objectID": "output.html#overview",
+    "href": "output.html#overview",
+    "title": "4  Communicate - Output",
+    "section": "",
+    "text": "(R)Markdown\nQuarto document structure and its YAML",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
+  },
+  {
+    "objectID": "output.html#a-fl300-look-at-a-document",
+    "href": "output.html#a-fl300-look-at-a-document",
+    "title": "4  Communicate - Output",
+    "section": "4.2 A FL300 look at a “document”",
+    "text": "4.2 A FL300 look at a “document”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4.2: Example document\n\n\n\n\n\n\n\nA document consists of\n\ncontent\n\ntext, code, and visualisations\n\nstructure\n\nlayout\nparagraphs or other blocks of content\n\nappearance\n\nfonts, colour, etc.\n\nformat\n\noverall output and functionality (i.e. static, interactive)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: Document as a sequence of blocks\n\n\n\n\n\n\n\nThus, a document is a sequence (or list) of blocks that contain inline elements or other blocks. Such blocks and elements can be associated with metadata.\nA block element starts on a new line and is followed by an empty line. It forms an identifiable block.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
+  },
+  {
+    "objectID": "output.html#rmarkdown",
+    "href": "output.html#rmarkdown",
+    "title": "4  Communicate - Output",
+    "section": "4.3 (R)Markdown",
+    "text": "4.3 (R)Markdown\nThe philosphy behind (R)Markdown is to use plain text format that is easy to write and even easy to read. This reduces the cognitive load and allows to focus on the writing/editing.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
+  },
+  {
+    "objectID": "output.html#text-formatting",
+    "href": "output.html#text-formatting",
+    "title": "4  Communicate - Output",
+    "section": "4.4 Text Formatting",
+    "text": "4.4 Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\nThis is some creative text ...\n just type\n… well … I hope you are not expecting something here …. that would be different from what\n\nitalics, bold, bold italics\n\n\n*italics*, **bold**, ***bold italics***\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n[This text is underlined]{.underline}\nThis text is underlined\n\n\n\n\n\n\n\n\n\n(R)Markdown\n\n\nOutput\n\n\n\n\n\nhighlight text (italic, bold): *italic text* and **bold text**\n\n\n\nitalic text and bold text\n\n\n\n\n\nsuper- and subscript: superscript^up^ and subscript~down~\n\n\n\nsuperscriptup and subscriptdown\n\n\n\n\n\nunderline (using Pandoc): my [text to underline]{.underline}\n\n\n\nmy text to underline\n\n\n\n\n\nstrikethrough: ~~text stricken through~~\n\n\n\ntext stricken through",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
+  },
+  {
+    "objectID": "output.html#footnotes",
+    "href": "output.html#footnotes",
+    "title": "4  Communicate - Output",
+    "section": "",
+    "text": "Thus, conceptually, we can edit/author a Qmd-document in any text editor - which ensures long-term survivability. Rendering a Qmd-document, however, requires an environment in which the marked text is interpreted.↩︎\nIf you are interested in tinkering with pandoc, have fun at: https://pandoc.org/try/.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Communicate - Output</span>"
+    ]
   }
 ]
